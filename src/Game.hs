@@ -33,8 +33,8 @@ handler = loop 100
             Heal n -> loop (health + n)
             Quit   -> return ()
 
-start :: IO ()
-start = do
+game :: IO ()
+game = do
   (output, input) <- spawn unbounded
 
   forkIO $ do runEffect $ lift user >~  toOutput output

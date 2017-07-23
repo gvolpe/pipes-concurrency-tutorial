@@ -1,8 +1,9 @@
 module Main where
 
---import Game (start)
+import Game (game)
 import Worker (start)
 import Mailbox (mailbox)
+import Broadcast (bcast)
 
 main :: IO ()
-main = mailbox
+main = bcast
