@@ -12,3 +12,10 @@ toOutput :: (MonadIO m) => Output a -> Consumer a m ()
 fromInput :: (MonadIO m) => Input a -> Producer a m ()
 ```
 
+Use `spawn'` (with aposthrophe) to seal the mailbox when you're done to avoid relying on garbage collection (calls to `performGC` won't be necessary).
+
+```haskell
+(output, input, seal) <- spawn' buffer
+```
+
+Use either `unbounded` or `bounded n` as `Buffer`, the input value of `spawn`.
