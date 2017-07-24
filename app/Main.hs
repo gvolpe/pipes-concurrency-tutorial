@@ -6,6 +6,7 @@ import Mailbox (mailbox)
 import Broadcast (bcast)
 import Peek (peek)
 import Callback (callback)
+import Cycle (nodeadlock)
 
 main :: IO ()
-main = callback
+main = nodeadlock
