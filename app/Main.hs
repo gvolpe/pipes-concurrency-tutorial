@@ -5,6 +5,7 @@ import Worker (start)
 import Mailbox (mailbox)
 import Broadcast (bcast)
 import Peek (peek)
+import Callback (callback)
 
 main :: IO ()
-main = peek
+main = callback

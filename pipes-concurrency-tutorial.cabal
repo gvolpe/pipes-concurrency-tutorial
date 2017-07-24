@@ -15,7 +15,7 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Game, Worker, Mailbox, Broadcast, Peek
+  exposed-modules:     Game, Worker, Mailbox, Broadcast, Peek, Callback
   build-depends:       base >= 4.7 && < 5
                      , pipes
                      , pipes-concurrency
